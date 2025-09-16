@@ -16,8 +16,7 @@ export default function Header({ whitepaper, scrollY, setOpenNav, openNav }) {
               <a href="#">Home</a>
               <a href="#about">About</a>
               <a href="#faq">FAQs</a>
-              <a href="#roadmap">Roadmap</a>
-              <a href="/whitepaper">Whitepaper</a>
+              <a href="#footer">Community</a>
             </div>
             <a href="#" className="hidden md:block text-sm comics border border-black text-black rounded-full px-5">Watch Live</a>
             <button onClick={() => setOpenNav(!openNav)} className="md:hidden">
@@ -31,7 +30,7 @@ export default function Header({ whitepaper, scrollY, setOpenNav, openNav }) {
           <a onClick={() => setOpenNav(false)} href="#" className="z-20 underline">Home</a>
           <a onClick={() => setOpenNav(false)} href="#about" className="z-20 underline">About</a>
           <a onClick={() => setOpenNav(false)} href="#faq" className="z-20 underline">FAQs</a>
-          <a onClick={() => setOpenNav(false)} href="#roadmap" className="z-20 underline">Community</a>
+          <a onClick={() => setOpenNav(false)} href="#footer" className="z-20 underline">Community</a>
           <div className='bg-black -bottom-2 rounded-lg -right-2 h-full absolute w-full z-1' />
           <div className='bg-yellow rounded-lg bottom-0 right-0 h-full absolute w-full !z-2' />
         </div>

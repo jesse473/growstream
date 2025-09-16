@@ -19,7 +19,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="relative bg-[] text-white py-12 overflow-hidden">
+    <footer id="footer" className="relative bg-[] text-white py-12 overflow-hidden">
       {/* Star Animation Styles */}
       <style jsx global>{`
         @keyframes starBlink {
@@ -66,16 +66,16 @@ export default function Footer() {
 
           {/* Center Column - Quick Links */}
           <div className="text-left flex items-center flex-col">
-            <h3 className="font-semibold text-left w-full max-w-[80px] mx-auto text-lg mb-4">Dex</h3>
-            <div className="space-y-2 text-sm text-left">
+            <h3 className="font-semibold text-left text-lg mb-4">Dex</h3>
+            <div className="flex gap-2 text-sm text-left">
               <a
-                href="#how-to-buy"
+                href="https://axiom.trade/discover"
                 className="block hover:text-white transition-colors text-sm"
               >
                 Axiom
               </a>
               <a
-                href="#tokenomics"
+                href="https://photon-sol.tinyastro.io/"
                 className="block hover:text-white transition-colors text-sm"
               >
                 Photon
@@ -96,7 +96,7 @@ export default function Footer() {
             </h3>
             <div className="flex justify-center md:justify-end space-x-4 mb-4">
               <a
-                href="https://twitter.com/skullofxrp"
+                href="https://x.com/growstreamfun"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:scale-110 transition-transform"
@@ -112,7 +112,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://t.me/skullofsatoshixrpl"
+                href="https://t.me/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:scale-110 transition-transform"
@@ -140,7 +140,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://dexscreener.com/xrpl/534B554C4C000000000000000000000000000000.rHdT63dBn7n3oVV97HSDoYJzv27g4iWp1w_xrp"
+                href="https://dexscreener.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:scale-110 transition-transform"
@@ -180,9 +180,6 @@ export default function Footer() {
                 </svg>
               </a>
             </div>
-            <p className="text-gray-400 text-xs font-['IHateComicSans']">
-              Follow us for the latest updates and community news
-            </p>
           </div>
         </div>
 
@@ -190,33 +187,16 @@ export default function Footer() {
         <div className="border-t border-gray-800 mb-6"></div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <div className="text-center md:text-left">
-            <p className="text-gray-400 text-sm font-['IHateComicSans']">
-              © 2025 Skull of Satoshi. All rights reserved.
-            </p>
-          </div>
+        <div className="">
 
-          <div className="text-center md:text-right">
-            <p className="text-gray-500 text-xs font-['IHateComicSans'] max-w-md">
-              $SKULL is a meme coin with no intrinsic value or financial return expectation. There is no formal team or
-              roadmap. It's completely useless and for entertainment purposes only.
+          <div className="">
+            <p className="text-gray-500 text-xs font-['IHateComicSans'] max-w-[1000px]">
+              GrowStream is a community-driven project launched on PumpFun. The concept of live plant growth symbolizes patience and organic growth but should not be interpreted as financial advice or a guarantee of returns. Cryptocurrencies are highly volatile and investing in $GROW involves risk, including the potential loss of your entire investment. Always do your own research (DYOR) before investing and never invest more than you can afford to lose. GrowStream and its affiliates are not responsible for market fluctuations, third-party platforms, or individual financial decisions. 
+
             </p>
           </div>
         </div>
 
-        {/* Contract Address Section */}
-        <div className="mb-20 mt-8 text-center">
-          <div className="bg-gray-900 bg-opacity-50 backdrop-blur-sm p-4 rounded-xl border border-gray-700 inline-block w-full max-w-[310px]">
-            <p className="text-gray-300 font-['IHateComicSans'] text-sm mb-2">Contract Address:</p>
-            <p className="text-green-400 font-['IHateComicSans'] text-xs lg:text-sm break-all">
-              rHdT63dBn7n3oVV97HSDoYJzv27g4iWp1w
-            </p>
-            <button onClick={copyCA} className="mt-3 bg-green-500 hover:bg-green-600 text-black py-2 px-4 rounded-full text-sm transition-colors">
-              {copied ? "Copied!" : "Copy Address"}
-            </button>
-          </div>
-        </div>
       </div>
 
     </footer>

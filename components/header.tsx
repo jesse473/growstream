@@ -26,12 +26,12 @@ export default function Header({ whitepaper, scrollY, setOpenNav, openNav }) {
         </div>
       </div>
       {openNav &&
-        <div className="md:hidden flex flex-col bg-blue border-4 border-black gap-8 frozen absolute w-[95%] left-[2.5%] p-5 mt-5 rounded-xl">
+        <div className="md:hidden flex flex-col bg-blue border-4 border-white gap-8 frozen absolute w-[95%] left-[2.5%] p-5 mt-5 rounded-xl">
           <a onClick={() => setOpenNav(false)} href="#" className="z-20 underline">Home</a>
           <a onClick={() => setOpenNav(false)} href="#about" className="z-20 underline">About</a>
           <a onClick={() => setOpenNav(false)} href="#faq" className="z-20 underline">FAQs</a>
           <a onClick={() => setOpenNav(false)} href="#footer" className="z-20 underline">Community</a>
-          <div className='bg-black -bottom-2 rounded-lg -right-2 h-full absolute w-full z-1' />
+          <div className='bg-white -bottom-2 rounded-lg -right-2 h-full absolute w-full z-1' />
           <div className='bg-yellow rounded-lg bottom-0 right-0 h-full absolute w-full !z-2' />
         </div>
       }

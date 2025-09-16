@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export function LiveStreamSection() {
   return (
-    <section id="live" className="py-20 bg-[#f9f4e8]">
+    <section id="about" className="py-20 bg-[#f9f4e8]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-5 md:mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-2">Live Growth Streams</h2>

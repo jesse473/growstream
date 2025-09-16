@@ -57,7 +57,7 @@ export default function Footer() {
                 SKULL OF SATOSHI
               </span>
             </div> */}
-            <a href="/" className="flex items-start  gap-1">
+            <a href="/" className="flex items-start justify-center md:justify-start gap-1">
               <img src="/icon.png" className="h-6" />
               <h1 className="font-semibold text-xl pt-1">GrowStream</h1>
             </a>

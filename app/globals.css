@@ -1,0 +1,154 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated color scheme to match natural, organic design from reference */
+  --background: #f9f5f0; /* Cream background for warm, natural feel */
+  --foreground: #4a4a4a; /* Dark gray for text readability */
+  --card: #ffffff; /* White cards for clean contrast */
+  --card-foreground: #4a4a4a; /* Dark gray text on cards */
+  --popover: #ffffff; /* White popovers */
+  --popover-foreground: #4a4a4a; /* Dark gray popover text */
+  --primary: #1db954; /* Bright green from logo - growth/nature */
+  --primary-foreground: #ffffff; /* White text on primary */
+  --secondary: #ff4081; /* Pink from logo - vibrant accent */
+  --secondary-foreground: #ffffff; /* White text on secondary */
+  --muted: #e8e3d8; /* Light beige for muted elements */
+  --muted-foreground: #6b6b6b; /* Muted text color */
+  --accent: #9c27b0; /* Purple from logo - creative accent */
+  --accent-foreground: #ffffff; /* White text on accent */
+  --destructive: #ff5252; /* Red for errors */
+  --destructive-foreground: #ffffff; /* White text on destructive */
+  --border: #d4c4b0; /* Warm beige borders */
+  --input: #ffffff; /* White input backgrounds */
+  --ring: rgba(29, 185, 84, 0.3); /* Soft green focus ring */
+  --chart-1: #1db954; /* Green for growth metrics */
+  --chart-2: #ff4081; /* Pink for engagement */
+  --chart-3: #9c27b0; /* Purple for community */
+  --chart-4: #e8e3d8; /* Light beige for neutral data */
+  --chart-5: #4a4a4a; /* Dark gray for baseline */
+  --radius: 0.5rem; /* Softer rounded corners */
+  --sidebar: #f9f5f0; /* Cream sidebar */
+  --sidebar-foreground: #4a4a4a; /* Dark gray sidebar text */
+  --sidebar-primary: #1db954; /* Green primary in sidebar */
+  --sidebar-primary-foreground: #ffffff; /* White text */
+  --sidebar-accent: #9c27b0; /* Purple accent in sidebar */
+  --sidebar-accent-foreground: #ffffff; /* White accent text */
+  --sidebar-border: #d4c4b0; /* Warm beige sidebar borders */
+  --sidebar-ring: rgba(29, 185, 84, 0.3); /* Soft green sidebar focus */
+}
+
+.dark {
+  --background: #2a2a2a;
+  --foreground: #f9f5f0;
+  --card: #3a3a3a;
+  --card-foreground: #f9f5f0;
+  --popover: #3a3a3a;
+  --popover-foreground: #f9f5f0;
+  --primary: #1db954;
+  --primary-foreground: #ffffff;
+  --secondary: #ff4081;
+  --secondary-foreground: #ffffff;
+  --muted: #4a4a4a;
+  --muted-foreground: #b0b0b0;
+  --accent: #9c27b0;
+  --accent-foreground: #ffffff;
+  --destructive: #ff5252;
+  --destructive-foreground: #ffffff;
+  --border: #4a4a4a;
+  --input: #3a3a3a;
+  --ring: rgba(29, 185, 84, 0.3);
+  --chart-1: #1db954;
+  --chart-2: #ff4081;
+  --chart-3: #9c27b0;
+  --chart-4: #4a4a4a;
+  --chart-5: #b0b0b0;
+  --sidebar: #2a2a2a;
+  --sidebar-foreground: #f9f5f0;
+  --sidebar-primary: #1db954;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #9c27b0;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #4a4a4a;
+  --sidebar-ring: rgba(29, 185, 84, 0.3);
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+.center {
+  @apply flex items-center justify-center
+}
+
+/* Added custom styles for natural, organic feel */
+.nature-gradient {
+  background: linear-gradient(135deg, #f9f5f0 0%, #e8e3d8 100%);
+}
+
+.plant-shadow {
+  box-shadow: 0 10px 30px rgba(29, 185, 84, 0.1);
+}
+
+.organic-border {
+  border-radius: 2rem 1rem 2rem 1rem;
+}
+
+
+.stickyNav {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  /* background: rgb(0 0 0 / 5%); */
+    /* backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);  */
+  z-index: 9999 !important;
+}

@@ -7,6 +7,7 @@ import { useEffect, useState } from "react"
 import Header from "@/components/header"
 import Faq from "@/components/faq";
 import Footer from "@/components/footer";
+import { PlantGallery } from "@/components/plant-gallery";
 
 export default function HomePage() {
   const [scrollY, setScrollY] = useState(0);
@@ -23,6 +24,7 @@ export default function HomePage() {
       <Header whitepaper={false} scrollY={scrollY} setOpenNav={setOpenNav} openNav={openNav} />
       <HeroSection />
       <LiveStreamSection />
+      <PlantGallery />
       <div className="border-black">
         <Faq />
         <Footer />
